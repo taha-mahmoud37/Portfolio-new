@@ -1,3 +1,8 @@
+@if(loading) {
+<div class="loading flex justify-center items-center">
+  <span class="loader"></span>
+</div>
+} @else {
 <div class="layout">
   <div class="sidebar shadow-md">
     <app-sidebar></app-sidebar>
@@ -9,3 +14,4 @@
     </div>
   </div>
 </div>
+}

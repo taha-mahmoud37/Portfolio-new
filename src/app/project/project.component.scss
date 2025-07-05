@@ -24,13 +24,16 @@
       font-size: 18px;
       bottom: 0;
       background-color: #c8c5c0;
-      height: 100px;
-      width: 50px;
+      height: 75px;
+      width: 40px;
       border-top-left-radius: 16px;
       border-bottom-right-radius: 16px;
 
       i:hover {
         color: $primary-color;
+      }
+      i {
+        font-size: 14px;
       }
     }
     &:hover .heart {

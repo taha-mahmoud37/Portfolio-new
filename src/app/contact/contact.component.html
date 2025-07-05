@@ -1,0 +1,170 @@
+<div class="grid sm:grid-cols-1 lg:grid-cols-2 contact my-4 gap-4">
+  <div class="col">
+    <form action="" class="rounded-2xl">
+      <h2 class="pb-5 text-4xl font-semibold">
+        {{ "sendmessage" | translate }}
+      </h2>
+      <div class="row row-cols-2 mb-4">
+        <div class="col-">
+          <label for="name" class="form-label block mb-1">
+            {{ "yourName" | translate }}
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="{{ 'enterYourName' | translate }}"
+          />
+        </div>
+        <div class="col-">
+          <label for="email" class="form-label block mb-1"
+            >{{ "yourEmail" | translate }}
+          </label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="{{ 'enterYourEmail' | translate }}"
+          />
+        </div>
+      </div>
+      <div class="row row-cols-1 mb-3">
+        <div class="col- mb-4">
+          <label for="message" class="form-label"
+            >{{ "subject" | translate }}
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="message"
+            placeholder="{{ 'projectDiscussion' | translate }}"
+          />
+        </div>
+        <div class="col-">
+          <label for="message" class="form-label"
+            >{{ "message" | translate }}
+          </label>
+          <textarea
+            class="form-control"
+            id="message"
+            rows="3"
+            placeholder="{{ 'enteryourMessage' | translate }}"
+          ></textarea>
+        </div>
+      </div>
+      <div>
+        <button type="submit" class="btn mt-2 text-white text-lg font-semibold">
+          {{ "submit" | translate }}
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="col">
+    <h3 class="mb-3 text-3xl font-bold">
+      {{ "contactInformation" | translate }}
+    </h3>
+    <div class="user-info flex flex-col gap-3">
+      <div class="email flex gap-4">
+        <div class="icon flex justify-center items-center">
+          <i class="fa-regular fa-envelope"></i>
+        </div>
+        <div>
+          <p class="text-xl font-semibold">{{ "email" | translate }}</p>
+          <a href="mailto:tahamahmoudx417&#64;gmail.com">
+            tahamahmoudx417&#64;gmail.com
+          </a>
+        </div>
+      </div>
+      <div class="phone flex gap-4">
+        <div class="icon flex justify-center items-center">
+          <i [class.phone-trans]="lang === 'ar'" class="fa-solid fa-phone"></i>
+        </div>
+        <div>
+          <p class="text-xl font-semibold">{{ "phone" | translate }}</p>
+          <a href="" class="text-sm font-medium"> +20 114 463 8034 </a>
+        </div>
+      </div>
+      <div class="location flex gap-4">
+        <div class="icon flex justify-center items-center">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div>
+          <p class="text-xl font-semibold">Location</p>
+          <a href="tahamahmoudx417@gmail.com" class="text-sm font-medium">
+            Cairo, Egypt
+          </a>
+        </div>
+      </div>
+      <div class="time flex gap-4">
+        <div class="icon flex justify-center items-center">
+          <i class="fa-regular fa-clock"></i>
+        </div>
+        <div>
+          <p class="text-xl font-semibold">{{ "responseTime" | translate }}</p>
+          <a href="tahamahmoudx417@gmail.com" class="text-sm font-medium">
+            {{ "withinhours" | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="social mt-4">
+      <h3 class="text-lg font-medium">{{ "followMedia" | translate }}</h3>
+      <div class="social-icons flex gap-4 mt-3">
+        <div class="github">
+          <a
+            href="https://github.com/taha-mahmoud37"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-2xl"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+        <div class="linkedin">
+          <a
+            href="https://www.linkedin.com/in/taha-mahmoud-1913161aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-2xl"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+        <div class="twitter">
+          <a
+            href="https://x.com/tahamahmoudx417?t=K5SXMT4H8UDdBy8QBwRRRQ&s=09"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-2xl"
+          >
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </div>
+        <div class="facebook">
+          <a
+            href="https://www.facebook.com/share/16csdYm8SC/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-2xl"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="work-together mt-4">
+      <h3 class="text-xl font-semibold pb-2">
+        {{ "LetsTogether" | translate }}
+      </h3>
+      <p class="text-base font-normal pb-2">
+        {{ "contactDescription" | translate }}
+      </p>
+      <div class="flex items-center text-green-400">
+        <div class="w-2 h-2 bg-green-400 rounded-full me-2"></div>
+        <span class="text-sm font-medium">{{
+          "availableProjects" | translate
+        }}</span>
+      </div>
+    </div>
+  </div>
+</div>

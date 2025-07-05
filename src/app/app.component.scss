@@ -1,0 +1,62 @@
+@import "./../assets/scss/configurations/config";
+
+.layout {
+  display: flex;
+  height: 100dvh;
+}
+
+.sidebar {
+  // background-color: $black-light2;
+  // color: $secondary-color;
+  // width: 100px;
+  // border-right: 1px solid rgba(255, 255, 255, 0.3);
+  // backdrop-filter: blur(12px);
+  // -webkit-backdrop-filter: blur(12px);
+}
+
+.content {
+  flex: 1;
+  background-color: $secondary-color;
+
+  .container {
+    height: calc(100dvh - 57px);
+  }
+}
+
+/* Whole scrollbar */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track (background) */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle (thumb) */
+body::-webkit-scrollbar-thumb {
+  background: #6c63ff;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+
+  .content {
+    height: auto;
+    .container {
+      height: auto;
+    }
+  }
+}

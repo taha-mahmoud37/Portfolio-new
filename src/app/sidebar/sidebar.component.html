@@ -1,0 +1,76 @@
+<div class="wrapper flex flex-col justify-between h-full items-center py-4">
+  <div [class.rtl]="currentLanguage === 'ar'" class="logo mb-4 rtl">
+    <a routerLink="/home"> {{ "tm" | translate }} </a>
+  </div>
+  <div>
+    <button class="sidebar-toggle none" (click)="showNav()"></button>
+  </div>
+  <div class="sidebar sidebar-content flex items-center justify-center">
+    <ul class="text-center flex flex-col gap-10">
+      <li>
+        <a routerLink="/home">
+          <img src="../../assets/images/home.svg" class="text-white" alt="" />
+          <p>{{ "home" | translate }}</p>
+        </a>
+      </li>
+      <li>
+        <a routerLink="about">
+          <img src="../../assets/images/user.svg" class="text-white" alt="" />
+          <p>{{ "about" | translate }}</p>
+        </a>
+      </li>
+      <li>
+        <a routerLink="projects">
+          <img
+            src="../../assets/images/projects.svg"
+            class="text-white"
+            alt=""
+          />
+          <p>{{ "projects" | translate }}</p>
+        </a>
+      </li>
+      <li>
+        <a routerLink="contact">
+          <img
+            src="../../assets/images/contact.svg"
+            class="text-white"
+            alt=""
+          />
+          <p>{{ "contact" | translate }}</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="lang">
+    <app-changelang></app-changelang>
+  </div>
+</div>
+
+<div class="nav-bar" #navbar>
+  <button class="sidebar-toggle none" (click)="hideNav(navbar)"></button>
+  <ul class="flex flex-col ps-2 justify-start gap-10">
+    <li (click)="hideNav(navbar)">
+      <a routerLink="/home">
+        <p>{{ "home" | translate }}</p>
+      </a>
+    </li>
+    <li (click)="hideNav(navbar)">
+      <a routerLink="about">
+        <p>{{ "about" | translate }}</p>
+      </a>
+    </li>
+    <li (click)="hideNav(navbar)">
+      <a routerLink="projects">
+        <p>{{ "projects" | translate }}</p>
+      </a>
+    </li>
+    <li (click)="hideNav(navbar)">
+      <a routerLink="contact">
+        <p>{{ "contact" | translate }}</p>
+      </a>
+    </li>
+    <li (click)="hideNav(navbar)">
+      <app-changelang></app-changelang>
+    </li>
+  </ul>
+</div>

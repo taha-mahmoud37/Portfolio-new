@@ -1,0 +1,11 @@
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+  @for(project of projects; track project.id) {
+  <div class="col">
+    <app-project [project]="project" />
+  </div>
+  } @empty {
+  <div class="col">
+    <p class="text-center text-muted">no projects</p>
+  </div>
+  }
+</div>

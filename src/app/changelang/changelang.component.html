@@ -1,0 +1,14 @@
+<div
+  [class.rtl]="currentLanguage === 'en'"
+  class="language-selector flex gap-4 justify-end"
+>
+  <div class="lang" role="button" (click)="toggleLanguage()">
+    <i class="fa-solid fa-globe"></i>
+  </div>
+  @if(currentLanguage === 'en') {
+  <button class="rounded-2xl">العربية</button>
+  }@else {
+
+  <button class="rounded-2xl">English</button>
+  }
+</div>

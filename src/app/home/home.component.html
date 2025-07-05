@@ -1,0 +1,26 @@
+<div class="home py-3 h-full flex items-center">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="avater">
+        <img src="../../assets/images/a1.jpeg" alt="" />
+      </div>
+    </div>
+    <div class="col-lg-8 flex items-center">
+      <div class="content-info">
+        <h5>{{ "hello" | translate }}</h5>
+        <h1>
+          {{ "name" | translate }}
+        </h1>
+        <p class="job-title">
+          {{ "jobTitle" | translate }}
+        </p>
+        <p class="description">
+          {{ "description" | translate }}
+        </p>
+        <button class="start" (click)="start()">
+          {{ "letStart" | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

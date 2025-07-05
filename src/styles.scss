@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/components/component";
+@import "./assets/scss/configurations/config";
+@import "tailwindcss";
+
+body {
+  font-family: $font-family;
+  height: 100dvh;
+  background-color: $bg-color;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6c63ff;
+  border-radius: 20px;
+}

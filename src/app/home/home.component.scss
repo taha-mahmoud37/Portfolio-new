@@ -1,0 +1,97 @@
+@import "../../assets/scss/configurations/config";
+.home {
+  .avater {
+    overflow: hidden;
+    border-radius: 12px;
+    img {
+      border-radius: 12px;
+      transition: transform 0.3s ease-in-out;
+      width: 500px;
+      height: 500px;
+      object-fit: cover;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  .content-info {
+    padding-inline-start: min(5em, 8%);
+    h5 {
+      @include fontStyles($font-size4, $font-weight3, $font-family);
+      color: $main-color;
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+    p.job-title {
+      @include fontStyles($font-size5, $font-weight3, $font-family);
+      color: $main-color;
+      margin-bottom: 10px;
+    }
+    p.description {
+      @include fontStyles($font-size3, $font-weight2, $font-family);
+      color: $main-color;
+      margin-bottom: 25px;
+
+      line-height: 1.5;
+      text-align: justify;
+    }
+    h1 {
+      @include fontStyles($font-size-large, $font-weight5, $font-family);
+
+      background-image: linear-gradient(
+        43deg,
+        $primary-color,
+        $gray-light2,
+        $primary-color,
+        $white-light1,
+        $black-light2
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+    .start {
+      background-color: $black-light2;
+      padding: 13px 0px;
+      min-width: 30px;
+      width: 180px;
+      color: $secondary-color;
+      text-align: center;
+      @include fontStyles($font-size4, $font-weight3, $font-family);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    height: auto !important;
+
+    .content-info {
+      padding-top: 10px;
+      padding-inline-start: 0;
+      h5 {
+        margin-bottom: 5px;
+        font-style: normal;
+      }
+      p.job-title {
+        margin-bottom: 5px;
+      }
+      p.description {
+        margin-bottom: 15px;
+        font-style: normal;
+      }
+      h1 {
+        font-size: $font-size-semilarge;
+      }
+    }
+  }
+}
